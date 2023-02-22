@@ -15,14 +15,14 @@
 
 @media (max-width: 34em) {
   .heading {
-    margin-top: 15rem;
+    margin-top: 40rem;
     font-size: 4rem;
-    text-shadow: 0 0 1px #05e851, 0 0.8px #05e851;
+    text-shadow: 0 0 1px #05e851, 0 1px #05e851;
   }
   .length-value,
   label {
     font-size: 3rem;
-    text-shadow: 0 0 1px #05e851, 0 0 0.8px #05e851;
+    text-shadow: 0 0 1px #05e851, 0 0 1px #05e851;
   }
   .length {
     width: 80%;
@@ -36,8 +36,13 @@
     height: 8px;
   }
 
+  .password-window {
+    top: 70%;
+  }
+
   .password-generated {
-    text-shadow: 0 0 1px #05e851, 0 0 0.8px #05e851;
+    text-shadow: none;
+    letter-spacing: 1rem;
   }
 }
 
