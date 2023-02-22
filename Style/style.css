@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Space Mono', monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 12rem auto;
+  margin-bottom: 4rem;
+  color: #049032;
+  text-shadow: 0 0 1px #05e851, 0 0 2px #05e851;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end) infinite,
+    blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+body {
+  background-color: #191d26;
+  position: relative;
+  overflow: hidden;
+}
+
+.length {
+  -webkit-appearance: none;
+  margin: 50px 0;
+  width: 50rem;
+}
+
+.length:focus {
+  outline: none;
+}
+
+.length::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1rem;
+  cursor: pointer;
+  background: linear-gradient(to right, #05e851, #049d37, #03812d);
+  box-shadow: 0 0 4px #05e851, 0 0 10px #05e851;
+}
+
+.length::-webkit-slider-thumb {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #05e851;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+  transition: 0.2s;
+  box-shadow: 0 0 4px #05e851, 0 0 10px #05e851;
+}
+
+.length:hover::-webkit-slider-thumb {
+  background: #05e851;
+  box-shadow: 0 0 1px #05e851, 0 0 5px #05e851;
+}
+
+.length:active::-webkit-slider-thumb {
+  background: rgb(3, 161, 29);
+  box-shadow: 0 0 1px #05e851, 0 0 5px #05e851;
+  transform: scale(1.2);
+}
+
+.length-value,
+label {
+  display: inline-block;
+  font-size: 4rem;
+  color: #0275c7;
+  text-shadow: 0 0 1px #05e851, 0 0 2px #05e851;
+  font-weight: 400;
+}
+
+.generate-btn {
+  margin: 4rem auto;
+  display: inline-block;
+  padding: 2rem 4rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #05e851;
+  color: #0275c7;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.generate-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 4px #05e851, 0 0 10px #05e851;
+}
+
+.password-window {
+  width: 80rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0275c7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1.6rem;
+  border: 0.2rem solid #05e851;
+  background-color: #191d26;
+  box-shadow: 0 0 4px #05e851, 0 0 10px #05e851;
+  z-index: 2;
+}
+
+.password-heading {
+  text-align: center;
+  font-size: 3.2rem;
+  color: #049032;
+  text-shadow: 0 0 1px #05e851, 0 0 1px #05e851;
+}
+
+.password-generated {
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  color: #0275c7;
+  text-shadow: 0 0 1px #05e851, 0 0 2px #05e851;
+  margin: 4rem auto;
+  margin-bottom: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.blur {
+  width: 100%;
+  height: 100vh;
+  background-color: #191d26;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.95;
+  z-index: 1;
+}
+
+.fa-circle-xmark {
+  font-size: 3rem;
+  color: #049032;
+  text-shadow: 0 0 1px #05e851, 0 0 2px #05e851;
+  margin-top: 1rem;
+  margin-left: 94%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.fa-circle-xmark:hover {
+  transform: scale(1.2);
+}
+
+.copy-btn,
+.copied {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border: 1px solid #05e851;
+  background-color: #0275c700;
+  border-radius: 1rem;
+  color: #05e851;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.copy-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 4px #05e851, 0 0 10px #05e851;
+}

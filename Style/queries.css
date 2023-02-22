@@ -1,0 +1,53 @@
+@media (max-width: 58em) {
+  .password-window {
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 42em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 34em) {
+  .heading {
+    font-size: 4rem;
+  }
+  .length-value,
+  label {
+    font-size: 3rem;
+  }
+  .length {
+    width: 80%;
+  }
+  .length::-webkit-slider-thumb {
+    width: 28px;
+    height: 28px;
+    margin-top: -10px;
+  }
+  .length::-webkit-slider-runnable-track {
+    height: 8px;
+  }
+}
+
+@media (max-width: 30em) {
+  .fa-circle-xmark {
+    margin-left: 90%;
+  }
+}
+
+@media (max-width: 28em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media (max-width: 20em) {
+    html {
+      font-size: 25%;
+    }
+  }

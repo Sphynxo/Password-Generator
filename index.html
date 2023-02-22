@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style/style.css" />
+    <link rel="stylesheet" href="Style/queries.css">
+
+    <script
+      src="https://kit.fontawesome.com/c1cfd8458f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="noun-password-5522655.ico">
+
+    <title>Generate Random Password</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="container">
+        <h1 class="heading">Generate Password</h1>
+        <label for="length">Password Length:</label>
+        <input type="range" id="length" class="length" min="8" max="16" />
+        <span id="length-value" class="length-value"></span>
+        <button id="generate-btn" class="generate-btn">Generate</button>
+      </div>
+      <div class="password-window hidden">
+        <i class="fa-regular fa-circle-xmark"></i>
+        <h2 class="password-heading">Your Password:</h2>
+        <span class="password-generated"></span>
+        <button class="copy-btn">
+          Copy to Clipboard <i class="fa-regular fa-clone"></i>
+        </button>
+        <span class="copied hidden"
+          >Copied <i class="fa-solid fa-check"></i
+        ></span>
+      </div>
+      <div class="blur hidden"></div>
+    </main>
+    <footer></footer>
+    <script src="Script/script.js"></script>
+  </body>
+</html>
